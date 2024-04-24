@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load mathfilters %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>welcome to DTL filters</h1>
+{% comment %}
+addition of two number
+{% endcomment %}
+<h1>first number:{{ x }}</h1>
+<h1>second number:{{ y }}</h1>
+{% comment %}
+addition of two numbers
+{% endcomment %}
+<h1>sum of x and y is:{{x |add:y}}</h1>
+<h1>sum of x and y is:{{x |sub:y}}</h1>
+<h1>sum of x and y is:{{x |mul:y}}</h1>
+<h1>sum of x and y is:{{x |divisibleby:y}}</h1>
+<h1>sum of x and y is:{{x |mod:y}}</h1>
+{% comment %}
+print list elements
+{% endcomment %}
+<h1>{{names|length}}</h1>
+<h1>{{names.0}}</h1>
+<h1>{{names.1}}</h1>
+<h1>{{names.2}}</h1>
+<h1>{{names.3}}</h1>
+{% comment %}
+print dictionary in list elements
+{% endcomment %}
+<h1>{{scores.0.name|length}}</h1>
+<h1>{{scores.1}}</h1>
+{% if x > y%}
+{{x}}
+{% else %}
+{{y}}
+{% endif %}
+
+{% for i in names reversed %}
+<h1>{{i}}</h1>
+{% endfor %}
+
+</body>
+</html>
